@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html>
+<head>
+<h1 id="topp">Guessing number</h1>
+
+	
+<script type="text/javascript">
+		var count = 0 ;
+		var mynumber = Math.floor(Math.random() * 100) + 1;
+		
+		function check ()
+		{	
+			count++;
+			var a = document.getElementById("aa").value;
+	;
+			if (a < mynumber)
+			{
+				var mess1 = "Guess x" + count + ": The number is larger than your guess."
+				document.getElementById("here0").innerHTML = mess1;
+			}
+			if (a > mynumber)
+			{
+				var mess1 = "Guess x" + count + ": The number is smaller than your guess."
+				document.getElementById("here0").innerHTML = mess1;
+			}
+			if (a == mynumber)
+			{
+				var mess1 = "Congratulations! You mada it! My number is " + mynumber + ". And you made a correct guess for " + count + " times. (Refresh the page if you want to play again.)";
+				document.getElementById("here0").innerHTML = mess1;
+			}		
+		}
+</script>
+	
+
+<div>
+	Welcome to Guessing number game! I am thinking of a number between 1 to 100 (incuding 1 and 100). Guess what my number is :)
+</div>
+
+
+<div>
+	What is your guess?
+	<input type="text" id="aa">
+	<button onclick="check();">Go</button>
+</div>
+<div id="here0"></div>
+
+
+
+
+
+<style type="text/css">
+    #home {
+    	text-decoration: none;
+    	background-color: #E8F97E;
+    	color: #AC5757;
+    	font-weight: bold;
+    	padding: 10px;
+    	font-size: 20px;
+    }
+
+    body {
+    	background-color: #ECCEF9;
+    }
+
+	h1 {
+		color: red;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 48px;
+	}
+    #home:link{
+    	background-color: yellow;
+    }
+    #home:vitsted{
+    	background-color: #314133;
+    }
+	#home:hover{
+		background-color: pink;
+	}
+	#home:active{
+		background-color: blue;
+	}
+	h3{
+		text-align: right;
+		background-color: #2BD151;
+	}
+
+	
+	
+</style>
+
+
+</head>
+<body>
+
+
+<h2><a href="https://zlifd.github.io/test/" target="_blank" title="back to home page" id="home">HOME</a></h2>
+
+
+<h3>
+<hr>
+ 3-8-2020 &copy; LZ DONG
+</h3>
+</body>
+</html>
